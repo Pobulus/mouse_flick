@@ -1,5 +1,6 @@
 # mouse_flick
-Simple utility for sending keystrokes with xdotool when the mouse is flicked in a certain direction
+Simple utility for sending keystrokes with xdotool when the mouse is flicked in a certain direction. 
+For example for switching virtual workspaces. 
 
 ## Requirements
 - [`SFML`](https://www.sfml-dev.org/index.php) for reading mouse movements
@@ -21,5 +22,6 @@ You might want to copy it to your `PATH` directory for convenience.
 
 I use `Super+D` because my mouse has a button which sends it
 
+Now press the button/shortcut and quickly move your mouse up, down, left or right to send keys. You can modify the `sendKeys()` function calls to suit your system's shortcuts, or replace them with `system()` to execute your own commands.
 
 
