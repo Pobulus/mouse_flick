@@ -15,15 +15,15 @@ int main(int argc, char** argv){
 	sf::sleep(sf::milliseconds(delay));
 	sf::Vector2i displacement =  sf::Mouse::getPosition() - initPos ;
 	
-	if(displacement.x > threshold){ 	//RIGHT
+	if(displacement.x > threshold){		//RIGHT
 		sendKeys("ctrl alt Right");
-	}else if(displacement.x < -threshold){ //LEFT
+	}else if(displacement.x < -threshold){ 	//LEFT
 		sendKeys("ctrl alt Left");
-	}else if(displacement.y < -threshold){ //UP
+	}else if(displacement.y < -threshold){ 	//UP
 		sendKeys("ctrl alt Up");
-	}else if(displacement.y > threshold){ //DOWN
+	}else if(displacement.y > threshold){ 	//DOWN
 		sendKeys("ctrl alt Down");
-	}else{
+	}else if(displacement == sf::Vector2i(0,0)){					//NONE
 		sendKeys("ctrl alt d");
 	}
 
